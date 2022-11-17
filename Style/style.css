@@ -1,0 +1,1373 @@
+@font-face {
+    font-family: 'Space Mono';
+    src: url(./Fonts/SpaceMono-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono'
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 800px) {
+    nav {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        background-color: #1a2a5e;
+        /* border-bottom: 2px solid #fe5220; */
+    }
+    
+    .nav-border {
+        border-bottom: 2px solid #1a2a5e;
+        background-color: #fff;
+    }
+    
+    .nav-border a {
+        color: #1a2a5e;
+    }
+    
+    h1 {
+        font-size: 3vw;
+    }
+    
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 40px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3vw;
+    }
+    
+    nav ul li a:hover {
+        box-shadow: 0px 4px #fe5220;
+    }
+    
+    nav ul li span,
+    .start .start-right h1 .highlight,
+    .about-me .about-me-left .about-me-info h1 span,
+    .skills .skills-top .skills-text h1 span,
+    .projects .projects-top .projects-text h1 span,
+    .contact .contact-right .contact-right-holder .contact-text h1 span {
+        color: #fe5220;
+    }
+    
+    body {
+        width: 100%;
+        /* font-size: 20px; */
+        font-size: 1.3vw;
+        color: #1a2a5e;
+    }
+    
+    .start {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .start .start-holder {
+        box-sizing: border-box;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        transition: 200ms linear;
+        overflow: hidden;
+    }
+    
+    /* .start .start-holder:hover {
+        transform: scale(1.03);
+        transition: 200ms linear;
+    }
+    
+    .start .start-holder:hover .start-photo,
+    .start .start-holder:hover .start-greeting {
+        transform: scale(1.05);
+        transition: 200ms linear;
+    } */
+    
+    .start .start-holder .start-left{
+        height: 100%;
+        width: 50%;
+        background-color: #1a2a5e;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .start .start-holder .start-left .start-photo {
+        height: 90%;
+        width: 90%;
+        text-align: center;
+        transition: 200ms linear;
+    }
+    
+    .start .start-holder .start-left .start-photo img {
+        height: 100%;
+        width: auto;
+    }
+    
+    .start .start-holder .start-right {
+        height: 100%;
+        width: 50%;
+        background-color: #1a2a5e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .start .start-holder .start-right .start-greeting {
+        transition: 200ms linear;
+    } */
+
+    .start .start-holder .start-left .start-hello {
+        display: none;
+    }
+
+    
+    .start .start-holder .start-right h1, 
+    .start .start-holder .start-right h2 {
+        color: #fff;
+    }
+    
+    .start .start-holder .start-right .start-contact {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 2%;
+    }
+    
+    .start .start-holder .start-right .start-contact a {
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    
+    .start .start-holder .start-right .start-contact a img {
+        height: 70%;
+        width: 70%;
+        background-color: #fe5220;
+        padding: 5%;
+        position: relative;
+        transition: 200ms linear;
+    }
+    
+    .start .start-holder .start-right .start-contact a img:hover {
+        cursor: pointer;
+        box-shadow: -4px 4px #000;
+        bottom: 2px;
+        left: 2px;
+        transition: 200ms linear;
+    }
+    
+    
+    .about-me {
+        display: flex;
+    }
+    
+    .about-me .about-me-left{
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-me .about-me-left .about-me-info {
+        height: 70%;
+        width: 70%;
+        background-color: #fff;
+        overflow: scroll;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+    .about-me .about-me-left .about-me-info h1,
+    .about-me .about-me-left .about-me-info p {
+        margin: 20px;
+    }
+    
+    .about-me .about-me-right{
+        box-sizing: border-box;
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-left: 5%;
+    }
+    
+    .about-me .about-me-right .about-me-grafic {
+        height: 70%;
+        width: auto;
+        /* text-align: center; */
+
+    }
+    
+    .about-me .about-me-right .about-me-grafic img {
+        height: 100%;
+        width: 90%;
+    }
+    
+    .about-me .about-me-right .fade-in-graphic {
+        opacity: 0;
+        transition: 500ms ease-in;
+    }
+    
+    .about-me .about-me-right .fade-in-graphic.appear {
+        opacity: 1;
+        /* transition: 500ms ease-in; */
+    }
+    
+    
+    .skills,
+    .projects {
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .skills .skills-top {
+        height: 25%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .skills .skills-top .skills-text h2 {
+        background: linear-gradient(
+            to bottom,
+            transparent 60%,
+            #fbd703 60%
+        );
+    }
+    
+    .skills .skills-bottom {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skills .skills-bottom .skills-holder {
+        height: 75%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img{
+        height: 15%;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img img{
+        height: 80%;
+        width: 80%;
+        object-fit: contain;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img p {
+        height: 20%;
+        margin: 15px;
+        text-align: center;
+    }
+    
+    .skills .skills-bottom .skills-holder .fade-in {
+        opacity: 0;
+        transition: 500ms ease-in;
+    }
+    
+    .skills .skills-bottom .skills-holder .fade-in.appear {
+        opacity: 1;
+    }
+    
+    
+    .projects .projects-top {
+        height: 22%;
+        width: 100%;
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projects .projects-bottom {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: skewY(-3deg);
+        background-image: url(./Photo/fon_bl.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top: 2px solid #1a2a5e;
+        border-bottom: 2px solid #1a2a5e;
+    }
+    
+    .projects .projects-bottom .projects-holder {
+        height: 80%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: skewY(3deg);
+    }
+    
+    .projects .projects-bottom .projects-holder .project {
+        height: 90%;
+        width: 22%;
+        background-color: #fff;
+        border: 1px solid #1a2a5e;
+        overflow: hidden;
+        position: relative;
+        box-shadow: -5px 5px #1a2a5e;
+    }
+    
+    .projects .projects-bottom .projects-holder img {
+        height: 35%;
+        width: 100%;
+    } 
+    
+    .projects .projects-bottom .projects-holder .projects-coming-soon img,
+    .projects .projects-bottom .projects-holder .projects-coming-soon .project-used-technology,
+    .projects .projects-bottom .projects-holder .projects-coming-soon .projects-button-holder {
+        filter: blur(2px);
+    }
+    
+    .projects .projects-bottom .projects-holder .project h1 {
+        font-size: 1.3vw;
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .project-used-technology {
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: 5%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .project-used-technology .tech {
+        height: 10%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 2%;
+        margin: 2%;
+        font-size: 1vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder {
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button,
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button-coming-soon {
+        height: 60%;
+        width: 60%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 200ms linear;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button:hover {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #1a2a5e;
+        background-color: #fff;
+        height: 80%;
+        width: 40%;
+        color: #1a2a5e;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body {
+        height: 80%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header {
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 {
+        font-size: 2vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 span {
+        color: #fe5220;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text {
+        padding: 5%;
+        height: 45%;
+        overflow: scroll;
+        margin: 5% 0;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 {
+        font-size: 1.3vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 span {
+        background: linear-gradient(
+            to bottom,
+            transparent 60%,
+            #fbd703 60%
+        );
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology {
+        height: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 0 5%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology .tech {
+        height: 30%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 1%;
+        margin: 1%;
+        font-size: 1vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button {
+        height: 40%;
+        width: 30%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button a {
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:hover {
+        background-color: #fe5220;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:hover a {
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    
+    .contact {
+        display: flex;
+    }
+    
+    .contact .contact-left {
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact .contact-left .contact-left-holder {
+        height: 70%;
+        width: 70%;
+        display: grid;
+        grid-template: 20% 20% 20% 25% / 30% 30% 30%;
+        grid-gap: 5%;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email {
+        grid-column: 1 / 4;
+        grid-row: 2 / 5;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social {
+        border: 2px solid #1a2a5e;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        /* box-shadow: -10px 10px #1a2a5e; */
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social img {
+        height: 60%;
+        width: auto;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social p,
+    .contact .contact-left .contact-left-holder .contact-social .hidden-image {
+        display: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social:hover {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -10px 10px #1a2a5e;
+        bottom: 5px;
+        left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social:hover img {
+        display: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social:hover p {
+        display: flex;
+        font-size: 1vw;
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social:hover .hidden-image {
+        display: flex;
+        height: 40%;
+        width: auto;
+    } 
+    
+    .contact .contact-left .contact-left-holder .contact-email form {
+        height: 90%;
+        width: auto;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1.3vw;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .my-email {
+        width: fit-content;
+        text-align: center;
+        background: linear-gradient(
+            to bottom,
+            transparent 60%,
+            #fbd703 60%
+        );
+    
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .input-text {
+        height: 30%;
+        font-size: 1.3vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        resize: none;
+        outline: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .input-email {
+        height: fit-content;
+        font-size: 1.3vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        outline: none;
+        appearance: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button {
+        height: 100%;
+        width: 20%;
+        border: 2px #1a2a5e solid;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+        font-size: 1.3vw;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button:hover {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+    
+    .contact .contact-right {
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact .contact-right .contact-right-holder {
+        height: 70%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+        
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-text {
+        height: 20%;
+        width: 100%;
+    } 
+    
+    .contact .contact-right .contact-right-holder .contact-text h1 {
+        margin: 20px;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-map {
+        height: 40%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-map img{
+        height: 100%;
+        width: auto;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-my-info {
+        height: 10%;
+        width: 100%;
+        margin-top: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-my-info img{
+        height: 60%;
+        width: auto;
+        margin: 0 20px;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-my-info p {
+        background: linear-gradient(
+            to bottom,
+            transparent 60%,
+            #fbd703 60%
+        );
+    }
+}
+
+
+@media only screen and (max-width: 800px)  {
+    nav {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    .start .start-right h1 span,
+    .about-me .about-me-left .about-me-info h1 span,
+    .skills .skills-top .skills-text h1 span,
+    .projects .projects-top .projects-text h1 span,
+    .contact .contact-right .contact-right-holder .contact-text h1 span {
+        color: #fe5220;
+    }
+
+    .start {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #1a2a5e;
+
+    }
+
+    .start .start-holder .start-left {
+        width: 100%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    .start .start-holder .start-left .start-photo {
+        height: 60%;
+        width: 100%;
+
+    }
+    .start .start-holder .start-left .start-photo img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .start .start-holder .start-left .start-hello {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .start .start-holder .start-left .start-hello img {
+        height: 70%;
+        text-align: center;
+    }
+
+    
+    .start .start-holder .start-right {
+        height: 20%;
+        width: 100%;
+    }
+
+    .start .start-holder .start-right .start-greeting {
+        text-align: center;
+        color: #fff;
+    }
+
+    .start .start-holder .start-right .start-greeting .mobile-hide,
+    .start .start-holder .start-right .start-greeting .start-contact {
+        display: none;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me .about-me-left{
+        height: 90vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .about-me .about-me-left .about-me-info {
+        height: 90%;
+        width: 90%;
+        background-color: #fff;
+        overflow: scroll;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+        margin-top: 10%;
+    }
+    .about-me .about-me-left .about-me-info h1,
+    .about-me .about-me-left .about-me-info p {
+        margin: 20px;
+    }
+
+    .about-me .about-me-right {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me .about-me-right .about-me-grafic {
+
+        width: 90%;
+    }
+    
+    .about-me .about-me-right .about-me-grafic img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .skills {
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .skills .skills-top {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .skills .skills-top .skills-text {
+        width: 80%;
+    }
+    
+    .skills .skills-bottom {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skills .skills-bottom .skills-holder {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img{
+        height: 25%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img img{
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
+    }
+    
+    .skills .skills-bottom .skills-holder .skills-img p {
+        height: 15%;
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .projects {
+        height: fit-content;
+    }
+
+    .projects .projects-top {
+        height: 30%;
+        width: 100%;
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects .projects-top .projects-text {
+        width: 80%;
+        text-align: start;
+    }
+    
+    .projects .projects-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projects .projects-bottom .projects-holder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    
+    .projects .projects-bottom .projects-holder .project {
+        height: 80vh;
+        width: 80%;
+        margin-top: 10%;
+        background-color: #fff;
+        border: 2px solid #1a2a5e;
+        overflow: hidden;
+        position: relative;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+    
+    .projects .projects-bottom .projects-holder img {
+        height: 40%;
+        width: 100%;
+    } 
+    
+    .projects .projects-bottom .projects-holder .projects-coming-soon img,
+    .projects .projects-bottom .projects-holder .projects-coming-soon .project-used-technology,
+    .projects .projects-bottom .projects-holder .projects-coming-soon .projects-button-holder {
+        filter: blur(2px);
+    }
+    
+    .projects .projects-bottom .projects-holder .project h1 {
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .project-used-technology {
+        height: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: 5%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .project-used-technology .tech {
+        height: 13%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 2%;
+        margin: 2%;
+        font-size: 4vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button,
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button-coming-soon {
+        height: 90%;
+        width: 60%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 200ms linear;
+        font-size: 5vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button:active {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+
+    .projects .projects-bottom .projects-holder .project .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #1a2a5e;
+        background-color: #fff;
+        height: 90%;
+        width: 90%;
+        color: #1a2a5e;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body {
+        height: 80%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header {
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 {
+        font-size: 6vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 span {
+        color: #fe5220;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 8vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text {
+        padding: 5%;
+        height: 55%;
+        overflow: scroll;
+        margin: 5% 0;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 {
+        font-size: 4vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology {
+        height: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 0 5%;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology .tech {
+        height: 35%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 1%;
+        margin: 1%;
+        font-size: 4vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button {
+        height: 35%;
+        width: 35%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+        font-size: 4vw;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button a {
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:active {
+        background-color: #fe5220;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+    
+    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:active a {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact .contact-left {
+        height: 80vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+    
+    .contact .contact-left .contact-left-holder {
+        height: 80%;
+        width: 80%;
+        display: grid;
+        grid-template: 20% 20% 20% 25% / 30% 30% 30%;
+        grid-gap: 5%;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email {
+        grid-column: 1 / 4;
+        grid-row: 2 / 5;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social {
+        border: 2px solid #1a2a5e;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        /* box-shadow: -10px 10px #1a2a5e; */
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social img {
+        height: 60%;
+        width: auto;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social p,
+    .contact .contact-left .contact-left-holder .contact-social .hidden-image {
+        display: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-social:active {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -10px 10px #1a2a5e;
+        bottom: 5px;
+        left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    .contact .contact-left .contact-left-holder .contact-email form {
+        height: 90%;
+        width: auto;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 4vw;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .my-email {
+        width: fit-content;
+        text-align: center;
+        background: linear-gradient(
+            to bottom,
+            transparent 60%,
+            #fbd703 60%
+        );
+    
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .input-text {
+        height: 30%;
+        font-size: 4vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        resize: none;
+        outline: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .input-email {
+        height: fit-content;
+        font-size: 4vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        outline: none;
+        appearance: none;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button {
+        height: 100%;
+        width: 40%;
+        border: 2px #1a2a5e solid;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+        font-size: 4vw;
+    }
+    
+    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button:active {
+        background-color: #fe5220;
+        color: #fff;
+        transition: 200ms linear;
+        cursor: pointer;
+        box-shadow: -5px 5px #1a2a5e;
+        bottom: 3px;
+        left: 3px;
+    }
+    
+    .contact .contact-right {
+        height: 60vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .contact .contact-right .contact-right-holder {
+        height: 80%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+        
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-text {
+        height: 20%;
+        width: 100%;
+    } 
+    
+    .contact .contact-right .contact-right-holder .contact-text h1 {
+        margin: 20px;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-map {
+        height: 40%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-map img{
+        height: 100%;
+        width: auto;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-my-info {
+        height: 10%;
+        width: 100%;
+        margin-top: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .contact .contact-right .contact-right-holder .contact-my-info img{
+        height: 60%;
+        width: auto;
+        margin: 0 20px;
+    }
+    
+
+}
