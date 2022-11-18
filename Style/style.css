@@ -90,17 +90,6 @@ html {
         overflow: hidden;
     }
     
-    /* .start .start-holder:hover {
-        transform: scale(1.03);
-        transition: 200ms linear;
-    }
-    
-    .start .start-holder:hover .start-photo,
-    .start .start-holder:hover .start-greeting {
-        transform: scale(1.05);
-        transition: 200ms linear;
-    } */
-    
     .start .start-holder .start-left{
         height: 100%;
         width: 50%;
@@ -131,9 +120,6 @@ html {
         align-items: center;
         justify-content: center;
     }
-    /* .start .start-holder .start-right .start-greeting {
-        transition: 200ms linear;
-    } */
 
     .start .start-holder .start-left .start-hello {
         display: none;
@@ -216,7 +202,6 @@ html {
     .about-me .about-me-right .about-me-grafic {
         height: 70%;
         width: auto;
-        /* text-align: center; */
 
     }
     
@@ -232,7 +217,6 @@ html {
     
     .about-me .about-me-right .fade-in-graphic.appear {
         opacity: 1;
-        /* transition: 500ms ease-in; */
     }
     
     
@@ -578,7 +562,6 @@ html {
         align-items: center;
         justify-content: center;
         transition: 200ms linear;
-        /* box-shadow: -10px 10px #1a2a5e; */
     }
     
     .contact .contact-left .contact-left-holder .contact-social img {
@@ -764,6 +747,7 @@ html {
 
     body {
         width: 100%;
+        color: #1a2a5e;
     }
 
     h1 {
@@ -798,16 +782,15 @@ html {
 
     .start .start-holder .start-left {
         width: 100%;
-        height: 75%;
+        height: 70%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-
     }
 
     .start .start-holder .start-left .start-photo {
-        height: 60%;
+        height: 70%;
         width: 100%;
 
     }
@@ -816,24 +799,11 @@ html {
         width: 100%;
         object-fit: contain;
     }
-
-    .start .start-holder .start-left .start-hello {
-        height: 30%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .start .start-holder .start-left .start-hello img {
-        height: 70%;
-        text-align: center;
-    }
-
     
     .start .start-holder .start-right {
-        height: 20%;
+        height: 30%;
         width: 100%;
+
     }
 
     .start .start-holder .start-right .start-greeting {
@@ -841,7 +811,6 @@ html {
         color: #fff;
     }
 
-    .start .start-holder .start-right .start-greeting .mobile-hide,
     .start .start-holder .start-right .start-greeting .start-contact {
         display: none;
     }
@@ -875,7 +844,7 @@ html {
     }
 
     .about-me .about-me-right {
-        height: 70vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         align-items: center;
@@ -883,7 +852,6 @@ html {
     }
 
     .about-me .about-me-right .about-me-grafic {
-
         width: 90%;
     }
     
@@ -1049,16 +1017,6 @@ html {
         transition: 200ms linear;
         font-size: 5vw;
     }
-    
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button:active {
-        background-color: #fe5220;
-        color: #fff;
-        transition: 200ms linear;
-        cursor: pointer;
-        box-shadow: -5px 5px #1a2a5e;
-        bottom: 3px;
-        left: 3px;
-    }
 
     .projects .projects-bottom .projects-holder .project .modal {
         position: fixed;
@@ -1165,20 +1123,6 @@ html {
         justify-content: center;
         color: #000;
     }
-    
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:active {
-        background-color: #fe5220;
-        transition: 200ms linear;
-        cursor: pointer;
-        box-shadow: -5px 5px #1a2a5e;
-        bottom: 3px;
-        left: 3px;
-    }
-    
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:active a {
-        color: #fff;
-        cursor: pointer;
-    }
 
     .contact {
         display: flex;
@@ -1217,7 +1161,6 @@ html {
         align-items: center;
         justify-content: center;
         transition: 200ms linear;
-        /* box-shadow: -10px 10px #1a2a5e; */
     }
     
     .contact .contact-left .contact-left-holder .contact-social img {
@@ -1229,19 +1172,6 @@ html {
     .contact .contact-left .contact-left-holder .contact-social .hidden-image {
         display: none;
     }
-    
-    .contact .contact-left .contact-left-holder .contact-social:active {
-        background-color: #fe5220;
-        color: #fff;
-        transition: 200ms linear;
-        cursor: pointer;
-        box-shadow: -10px 10px #1a2a5e;
-        bottom: 5px;
-        left: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } 
 
     .contact .contact-left .contact-left-holder .contact-email form {
         height: 90%;
@@ -1301,16 +1231,7 @@ html {
         transition: 200ms linear;
         position: relative;
         font-size: 4vw;
-    }
-    
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button:active {
-        background-color: #fe5220;
-        color: #fff;
-        transition: 200ms linear;
-        cursor: pointer;
-        box-shadow: -5px 5px #1a2a5e;
-        bottom: 3px;
-        left: 3px;
+        color: #1a2a5e;
     }
     
     .contact .contact-right {
