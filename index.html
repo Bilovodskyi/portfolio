@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,44 +11,55 @@
 </head>
 <header>
     <section class="header">
-        <nav>
-            <ul>
-                <li><a href="#start"><span>#</span>Start</a></li>
-                <li><a href="#about-me"><span>#</span>About me</a></li>
-                <li><a href="#skills"><span>#</span>Skills</a></li>
-                <li><a href="#projects"><span>#</span>Projects</a></li>
-                <li><a href="#contact"><span>#</span>Contact</a></li>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#start" class="nav-link"><span>#</span>Start</a></li>
+                <li><a href="#about-me" class="nav-link"><span>#</span>About me</a></li>
+                <li><a href="#skills" class="nav-link"><span>#</span>Skills</a></li>
+                <li><a href="#projects" class="nav-link"><span>#</span>Projects</a></li>
+                <li><a href="#contact" class="nav-link"><span>#</span>Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </section>
 </header>
+
 <body>
     <section class="start" id="start">
         <div class="start-holder">
             <div class="start-left">
                 <div class="start-photo"><img src="./Style/Photo/start_orange.png" alt="Iam"></div>
-             </div>
-             <div class="start-right">
-                 <div class="start-greeting">
-                     <h1>Hello, I'am Bohdan</h1>
-                     <h1><span class="highlight">Front-end</span> developer <br> and <span class="highlight">Python</span> engineer</h1>
-                     <div class="start-contact">
-                         <a href="https://github.com/Bilovodskyi" target="_blank"><img src="./Style/Logo/github_blue.png" alt="github"></a>
-                         <a href="#contact"><img src="./Style/Logo/email_blue.png" alt="email"></a>
-                         <a href="https://t.me/Bil_Bog" target="_blank"><img src="./Style/Logo/cv_blue.png" alt="cv"></a>
-                         <a href="#"><img src="./Style/Logo/linkedin_blue.png" alt="linkedin"></a>
-                     </div>
-                 </div>
-             </div>
+            </div>
+            <div class="start-right">
+                <div class="start-greeting">
+                    <h1>Hello, I'am Bohdan</h1>
+                    <h1><span class="highlight">Front-end</span> developer <br> and <span
+                            class="highlight">Python</span> engineer</h1>
+                    <div class="start-contact">
+                        <a href="https://github.com/Bilovodskyi" target="_blank"><img src="./Style/Logo/github_blue.png"
+                                alt="github"></a>
+                        <a href="#contact"><img src="./Style/Logo/email_blue.png" alt="email"></a>
+                        <a href="https://t.me/Bil_Bog" target="_blank"><img src="./Style/Logo/cv_blue.png" alt="cv"></a>
+                        <a href="#"><img src="./Style/Logo/linkedin_blue.png" alt="linkedin"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="about-me" id="about-me">
         <div class="about-me-left">
             <div class="about-me-info">
                 <h1><span>#</span> About me</h1>
-                <p>I started programming a year ago, it started as an attempt to improve my skills as a trader, but I quickly fell in love with computers and programming. <br>
-                My goal is to improve my skills so that I can discover more and more ways to interact with computers and create amazing things. <br>
-                I'm full of enthusiasm to open the doors of a new life experience, and to work in a team of people for whom programming is a passion, to develop my person and professional skills.  
+                <p>I started programming a year ago, it started as an attempt to improve my skills as a trader, but I
+                    quickly fell in love with computers and programming. <br>
+                    My goal is to improve my skills so that I can discover more and more ways to interact with computers
+                    and create amazing things. <br>
+                    I'm full of enthusiasm to open the doors of a new life experience, and to work in a team of people
+                    for whom programming is a passion, to develop my person and professional skills.
                 </p>
             </div>
             <!-- <div class="about-me-shadow"></div> -->
@@ -145,7 +157,9 @@
                         <div class="tech">JavaScript</div>
                         <div class="tech">Responsive Design</div>
                     </div>
-                    <div class="projects-button-holder"><div class="projects-button first-project-button">View more</div></div>
+                    <div class="projects-button-holder">
+                        <div class="projects-button first-project-button">View more</div>
+                    </div>
                     <dialog class="modal" id="first-modal">
                         <div class="modal-body">
                             <div class="modal-header">
@@ -153,9 +167,11 @@
                                 <button class="close-button close-button-one">&times;</button>
                             </div>
                             <div class="modal-text">
-                                <h2>This project was complited as a code challenge on <span>Frontendmentor.io</span>. It was two main goals of this challenge: <br>
-                                First, make this tip calculator app design looking as close to the design on task as possible. <br>
-                                Second, built calculator functionality using <span>JavaScript</span></h2>
+                                <h2>This project was complited as a code challenge on <span>Frontendmentor.io</span>. It
+                                    was two main goals of this challenge: <br>
+                                    First, make this tip calculator app design looking as close to the design on task as
+                                    possible. <br>
+                                    Second, built calculator functionality using <span>JavaScript</span></h2>
                             </div>
                             <div class="modal-used-technology">
                                 <div class="tech">HTML5</div>
@@ -165,8 +181,10 @@
                             </div>
                         </div>
                         <div class="modal-button-holder">
-                            <div class="modal-button"><a href="https://bilovodskyi.github.io/tip-calculator/" target="_blank">Visit site</a></div>
-                            <div class="modal-button"><a href="https://github.com/Bilovodskyi/tip-calculator" target="_blank">View code</a></div>
+                            <div class="modal-button"><a href="https://bilovodskyi.github.io/tip-calculator/"
+                                    target="_blank">Visit site</a></div>
+                            <div class="modal-button"><a href="https://github.com/Bilovodskyi/tip-calculator"
+                                    target="_blank">View code</a></div>
                         </div>
                     </dialog>
                 </div>
@@ -177,7 +195,9 @@
                         <div class="tech">React</div>
                         <div class="tech">RESTful APIs</div>
                     </div>
-                    <div class="projects-button-holder"><div class="projects-button second-project-button">View more</div></div>
+                    <div class="projects-button-holder">
+                        <div class="projects-button second-project-button">View more</div>
+                    </div>
                     <dialog class="modal" id="second-modal">
                         <div class="modal-body">
                             <div class="modal-header">
@@ -185,7 +205,10 @@
                                 <button class="close-button close-button-two">&times;</button>
                             </div>
                             <div class="modal-text">
-                                <h2>I built this project as a part of the React Basics module from <span>the Front-end Developer Career Path</span> on <span>Codecademy</span>. It was ready HTML file and CSS styling, so I buit functionality part using <span>React (class based components)</span> and <span>Spotify API</span> </h2>
+                                <h2>I built this project as a part of the React Basics module from <span>the Front-end
+                                        Developer Career Path</span> on <span>Codecademy</span>. It was ready HTML file
+                                    and CSS styling, so I buit functionality part using <span>React (class based
+                                        components)</span> and <span>Spotify API</span> </h2>
                             </div>
                             <div class="modal-used-technology">
                                 <div class="tech">React</div>
@@ -193,15 +216,18 @@
                             </div>
                         </div>
                         <div class="modal-button-holder">
-                            <div class="modal-button"><a href="https://bilovodskyi.github.io/playlist-creator/" target="_blank">Visit site</a></div>
-                            <div class="modal-button"><a href="https://github.com/Bilovodskyi/playlist-creator/tree/main" target="_blank">View code</a></div>
+                            <div class="modal-button"><a href="https://bilovodskyi.github.io/playlist-creator/"
+                                    target="_blank">Visit site</a></div>
+                            <div class="modal-button"><a
+                                    href="https://github.com/Bilovodskyi/playlist-creator/tree/main"
+                                    target="_blank">View code</a></div>
                         </div>
                     </dialog>
                 </div>
                 <div class="projects-third-project project">
                     <img src="./Style/Photo/blank-project.png" alt="blank">
                     <h1>My next project</h1>
-                    <div class="project-used-technology"> 
+                    <div class="project-used-technology">
                         <div class="tech">HTML5</div>
                         <div class="tech">CSS3</div>
                         <div class="tech">React</div>
@@ -209,7 +235,9 @@
                         <div class="tech">RESTful APIs</div>
                         <div class="tech">Responsive Design</div>
                     </div>
-                    <div class="projects-button-holder"><div class="projects-button third-project-button">View more</div></div>
+                    <div class="projects-button-holder">
+                        <div class="projects-button third-project-button">View more</div>
+                    </div>
                     <dialog class="modal" id="third-modal">
                         <div class="modal-body">
                             <div class="modal-header">
@@ -217,9 +245,12 @@
                                 <button class="close-button close-button-three">&times;</button>
                             </div>
                             <div class="modal-text">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloribus nobis, quia consequatur veritatis tempora natus iusto voluptatum corporis aliquam, nam officia illum odit suscipit maiores. Illo repudiandae natus iste!tempora natus iusto voluptatum corporis aliquam, nam officia illum odit suscipit maiores. </h2>
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloribus nobis, quia
+                                    consequatur veritatis tempora natus iusto voluptatum corporis aliquam, nam officia
+                                    illum odit suscipit maiores. Illo repudiandae natus iste!tempora natus iusto
+                                    voluptatum corporis aliquam, nam officia illum odit suscipit maiores. </h2>
                             </div>
-                            <div class="modal-used-technology"> 
+                            <div class="modal-used-technology">
                                 <div class="tech">HTML5</div>
                                 <div class="tech">CSS3</div>
                                 <div class="tech">React</div>
@@ -244,7 +275,9 @@
                         <div class="tech">React</div>
                         <div class="tech">Responsive Design</div>
                     </div>
-                    <div class="projects-button-holder"><div class="projects-button-coming-soon">View more</div></div>
+                    <div class="projects-button-holder">
+                        <div class="projects-button-coming-soon">View more</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -280,12 +313,12 @@
                         <div class="form-button-holder">
                             <button type="submit">Send</button>
                         </div>
-                   </form>
+                    </form>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="contact-right">
-            <div class="contact-right-holder">  
+            <div class="contact-right-holder">
                 <div class="contact-text">
                     <h1><span>#</span> Contact</h1>
                 </div>
@@ -305,4 +338,5 @@
         </div>
     </section>
 </body>
+
 </html>

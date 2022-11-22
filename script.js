@@ -15,6 +15,10 @@ const fadeInGraphic = document.querySelectorAll('.fade-in-graphic')
 const navMenu = document.querySelector('nav')
 const startPage = document.querySelector('.start')
 
+const hamburger = document.querySelector('.hamburger')
+const navMenuMobile = document.querySelector('.nav-menu')
+const navLink = document.querySelectorAll('.nav-link')
+
 
 function onClickOne(event) {
     if (event.target === firstModal) {
@@ -77,50 +81,60 @@ thirdModal.addEventListener('click', onClickThree)
 //     rootMargin: "0px 0px -150px 0px " 
 // }
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
     entries.forEach(entry => {
-        if(!entry.isIntersecting) {
+        if (!entry.isIntersecting) {
             return
         } else {
             entry.target.classList.add('appear')
             appearOnScroll.unobserve(entry.target)
         }
     })
-}, { 
-    rootMargin: "0px 0px -150px 0px " 
+}, {
+    rootMargin: "0px 0px -150px 0px "
 })
 
 fadeIn.forEach(fader => {
     appearOnScroll.observe(fader)
 })
 
-const appearOnScrollGraphic = new IntersectionObserver(function(entriesTwo, appearOnScrollGraphic) {
+const appearOnScrollGraphic = new IntersectionObserver(function (entriesTwo, appearOnScrollGraphic) {
     entriesTwo.forEach(entry => {
-        if(!entry.isIntersecting) {
+        if (!entry.isIntersecting) {
             return
         } else {
             entry.target.classList.add('appear')
             appearOnScrollGraphic.unobserve(entry.target)
         }
     })
-}, { 
-    rootMargin: "0px 0px -500px 0px " 
+}, {
+    rootMargin: "0px 0px -500px 0px "
 })
 
 fadeInGraphic.forEach(fader => {
     appearOnScrollGraphic.observe(fader)
 })
 
-const navigationMenu = new IntersectionObserver(function(entriesThree, navigationMenu) {
+const navigationMenu = new IntersectionObserver(function (entriesThree, navigationMenu) {
     entriesThree.forEach(entry => {
-        if(!entry.isIntersecting) {
+        if (!entry.isIntersecting) {
             navMenu.classList.add('nav-border')
         } else {
             navMenu.classList.remove('nav-border')
         }
     })
-}, { 
-    rootMargin: "-50px 0px 0px 0px " 
+}, {
+    rootMargin: "-50px 0px 0px 0px "
 })
 
 navigationMenu.observe(startPage)
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    navMenuMobile.classList.toggle('active')
+})
+
+navLink.forEach(link => link.addEventListener('click', () => {
+    hamburger.classList.remove('active')
+    navMenuMobile.classList.remove('active')
+}))
