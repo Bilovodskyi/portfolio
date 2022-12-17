@@ -6,14 +6,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono'
+    font-family: 'Space Mono', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1260px) {
     nav {
         width: 100%;
         height: 60px;
@@ -85,7 +85,7 @@ html {
         justify-content: center;
     }
 
-    .start .start-holder {
+    .start-holder {
         box-sizing: border-box;
         height: 100vh;
         width: 100%;
@@ -94,28 +94,28 @@ html {
         overflow: hidden;
     }
 
-    .start .start-holder .start-left {
+    .start-left {
         height: 100%;
         width: 50%;
         background-color: #1a2a5e;
         display: flex;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .start .start-holder .start-left .start-photo {
+    .start-photo {
         height: 90%;
         width: 90%;
         text-align: center;
         transition: 200ms linear;
     }
 
-    .start .start-holder .start-left .start-photo img {
+    .start-photo img {
         height: 100%;
         width: auto;
     }
 
-    .start .start-holder .start-right {
+    .start-right {
         height: 100%;
         width: 50%;
         background-color: #1a2a5e;
@@ -125,30 +125,44 @@ html {
         justify-content: center;
     }
 
-    .start .start-holder .start-left .start-hello {
+    .start-hello {
         display: none;
     }
 
 
-    .start .start-holder .start-right h1,
-    .start .start-holder .start-right h2 {
+    .start-right h1,
+    .start-right h2 {
         color: #fff;
     }
 
-    .start .start-holder .start-right .start-contact {
+    .start-contact {
         display: flex;
         justify-content: flex-start;
         margin-top: 2%;
+        position: relative;
     }
 
-    .start .start-holder .start-right .start-contact a {
+    .start-contact a {
         height: 50px;
         width: 50px;
         margin-right: 10px;
         margin-top: 10px;
     }
 
-    .start .start-holder .start-right .start-contact a img {
+    .start-contact a .hidden-logo {
+        display: none;
+    }
+
+    .start-contact a:hover .hidden-logo {
+        display: block;
+        
+    }
+
+    .start-contact a:hover img {
+        display: none;
+    }
+
+    .start-contact a img {
         height: 70%;
         width: 70%;
         background-color: #fe5220;
@@ -157,7 +171,7 @@ html {
         transition: 200ms linear;
     }
 
-    .start .start-holder .start-right .start-contact a img:hover {
+    .start-contact a img:hover {
         cursor: pointer;
         box-shadow: -4px 4px #000;
         bottom: 2px;
@@ -170,7 +184,7 @@ html {
         display: flex;
     }
 
-    .about-me .about-me-left {
+    .about-me-left {
         height: 100vh;
         width: 50%;
         background-color: #fff;
@@ -179,7 +193,7 @@ html {
         justify-content: center;
     }
 
-    .about-me .about-me-left .about-me-info {
+    .about-me-info {
         height: 70%;
         width: 70%;
         background-color: #fff;
@@ -188,12 +202,12 @@ html {
         box-shadow: -10px 10px #1a2a5e;
     }
 
-    .about-me .about-me-left .about-me-info h1,
-    .about-me .about-me-left .about-me-info p {
+    .about-me-info h1,
+    .about-me-info p {
         margin: 20px;
     }
 
-    .about-me .about-me-right {
+    .about-me-right {
         box-sizing: border-box;
         height: 100vh;
         width: 50%;
@@ -204,23 +218,23 @@ html {
         padding-left: 5%;
     }
 
-    .about-me .about-me-right .about-me-grafic {
+    .about-me-grafic {
         height: 70%;
-        width: auto;
-
-    }
-
-    .about-me .about-me-right .about-me-grafic img {
-        height: 100%;
         width: 90%;
+        
     }
 
-    .about-me .about-me-right .fade-in-graphic {
+    .about-me-grafic img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .fade-in-graphic {
         opacity: 0;
         transition: 500ms ease-in;
     }
 
-    .about-me .about-me-right .fade-in-graphic.appear {
+    .fade-in-graphic.appear {
         opacity: 1;
     }
 
@@ -232,7 +246,7 @@ html {
         background-color: #fff;
     }
 
-    .skills .skills-top {
+    .skills-top {
         height: 25%;
         width: 100%;
         display: flex;
@@ -240,13 +254,13 @@ html {
         justify-content: center;
     }
 
-    .skills .skills-top .skills-text h2 {
+    .skills-text h2 {
         background: linear-gradient(to bottom,
                 transparent 60%,
                 #fbd703 60%);
     }
 
-    .skills .skills-bottom {
+    .skills-bottom {
         height: 80%;
         width: 100%;
         display: flex;
@@ -254,7 +268,7 @@ html {
         justify-content: center;
     }
 
-    .skills .skills-bottom .skills-holder {
+    .skills-holder {
         height: 75%;
         width: 70%;
         display: flex;
@@ -263,7 +277,7 @@ html {
         flex-wrap: wrap;
     }
 
-    .skills .skills-bottom .skills-holder .skills-img {
+    .skills-holder .skills-img {
         height: 15%;
         width: 15%;
         display: flex;
@@ -272,29 +286,29 @@ html {
         justify-content: center;
     }
 
-    .skills .skills-bottom .skills-holder .skills-img img {
+    .skills-holder .skills-img img {
         height: 80%;
         width: 80%;
         object-fit: contain;
     }
 
-    .skills .skills-bottom .skills-holder .skills-img p {
+    .skills-holder .skills-img p {
         height: 20%;
         margin: 15px;
         text-align: center;
     }
 
-    .skills .skills-bottom .skills-holder .fade-in {
+    .skills-holder .fade-in {
         opacity: 0;
         transition: 500ms ease-in;
     }
 
-    .skills .skills-bottom .skills-holder .fade-in.appear {
+    .skills-holder .fade-in.appear {
         opacity: 1;
     }
 
 
-    .projects .projects-top {
+    .projects-top {
         height: 22%;
         width: 100%;
         padding-top: 15px;
@@ -303,7 +317,7 @@ html {
         justify-content: center;
     }
 
-    .projects .projects-bottom {
+    .projects-bottom {
         height: 70%;
         width: 100%;
         display: flex;
@@ -317,7 +331,7 @@ html {
         border-bottom: 2px solid #1a2a5e;
     }
 
-    .projects .projects-bottom .projects-holder {
+    .projects-holder {
         height: 80%;
         width: 70%;
         display: flex;
@@ -326,7 +340,12 @@ html {
         transform: skewY(3deg);
     }
 
-    .projects .projects-bottom .projects-holder .project {
+    .projects-holder img {
+        height: 35%;
+        width: 100%;
+    }
+
+    .projects-holder .project {
         height: 90%;
         width: 22%;
         background-color: #fff;
@@ -336,24 +355,19 @@ html {
         box-shadow: -5px 5px #1a2a5e;
     }
 
-    .projects .projects-bottom .projects-holder img {
-        height: 35%;
-        width: 100%;
-    }
-
-    .projects .projects-bottom .projects-holder .projects-coming-soon img,
-    .projects .projects-bottom .projects-holder .projects-coming-soon .project-used-technology,
-    .projects .projects-bottom .projects-holder .projects-coming-soon .projects-button-holder {
+    .projects-coming-soon img,
+    .projects-coming-soon .project-used-technology,
+    .projects-coming-soon .projects-button-holder {
         filter: blur(2px);
     }
 
-    .projects .projects-bottom .projects-holder .project h1 {
+    .projects-holder .project h1 {
         font-size: 1.3vw;
         padding-top: 5%;
         text-align: center;
     }
 
-    .projects .projects-bottom .projects-holder .project .project-used-technology {
+    .project-used-technology {
         height: 30%;
         display: flex;
         flex-wrap: wrap;
@@ -361,7 +375,7 @@ html {
         margin: 5%;
     }
 
-    .projects .projects-bottom .projects-holder .project .project-used-technology .tech {
+    .project-used-technology .tech {
         height: 10%;
         width: auto;
         display: flex;
@@ -373,15 +387,15 @@ html {
         font-size: 1vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .projects-button-holder {
+    .projects-button-holder {
         height: 15%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button,
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button-coming-soon {
+    .projects-button,
+    .projects-button-coming-soon {
         height: 60%;
         width: 60%;
         border: 2px #1a2a5e solid;
@@ -392,7 +406,7 @@ html {
         transition: 200ms linear;
     }
 
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button:hover {
+    .projects-button:hover {
         background-color: #fe5220;
         color: #fff;
         transition: 200ms linear;
@@ -402,7 +416,7 @@ html {
         left: 3px;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal {
+    .modal {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -412,32 +426,86 @@ html {
         height: 80%;
         width: 40%;
         color: #1a2a5e;
+        overflow: visible;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body {
+    .modal-body {
         height: 80%;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal::backdrop {
+    .left-btn {
+        cursor: pointer;
+        position: fixed;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+    }
+
+    .left-btn img {
+        height: 100%;
+    }
+
+    .right-btn {
+        cursor: pointer;
+        position: fixed;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+    }
+
+    .right-btn img {
+        height: 100%;
+    }
+
+    .modal .modal-js-project {
+        display: block;
+    }
+
+    .modal .modal-react-project {
+        display: none;
+    }
+
+    .modal-js-buttons {
+        display: flex;
+    }
+
+    .modal-react-buttons {
+        display: none;
+    }
+
+
+    .modal::backdrop {
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header {
+    .modal-header {
         padding: 0 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 {
+    .modal .modal-header h1 {
         font-size: 2vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 span {
+    .modal-header h1 span {
         color: #fe5220;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header .close-button {
+    .modal-header .close-button {
         cursor: pointer;
         border: none;
         outline: none;
@@ -445,24 +513,24 @@ html {
         font-size: 2vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text {
+    .modal-text {
         padding: 5%;
         height: 45%;
         overflow: scroll;
         margin: 5% 0;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 {
+    .modal-text h2 {
         font-size: 1.3vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 span {
+    .modal-text h2 span {
         background: linear-gradient(to bottom,
                 transparent 60%,
                 #fbd703 60%);
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology {
+    .modal-used-technology {
         height: 10%;
         display: flex;
         flex-wrap: wrap;
@@ -470,7 +538,7 @@ html {
         padding: 0 5%;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology .tech {
+    .modal-used-technology .tech {
         height: 30%;
         width: auto;
         display: flex;
@@ -482,7 +550,7 @@ html {
         font-size: 1vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder {
+    .modal-button-holder {
         height: 20%;
         width: 100%;
         display: flex;
@@ -492,7 +560,7 @@ html {
         bottom: 0;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button {
+    .modal-button {
         height: 40%;
         width: 30%;
         border: 2px #1a2a5e solid;
@@ -503,7 +571,7 @@ html {
         position: relative;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button a {
+    .modal-button a {
         height: 100%;
         width: 100%;
         text-decoration: none;
@@ -511,9 +579,10 @@ html {
         align-items: center;
         justify-content: center;
         color: #000;
+        font-size: 1.5vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:hover {
+    .modal-button:hover {
         background-color: #fe5220;
         transition: 200ms linear;
         cursor: pointer;
@@ -522,17 +591,42 @@ html {
         left: 3px;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button:hover a {
+    .modal-button:hover a {
         color: #fff;
         cursor: pointer;
     }
 
 
     .contact {
+        position: relative;
         display: flex;
     }
 
-    .contact .contact-left {
+    .contact-email-send {
+        border: 2px #1a2a5e solid;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .contact-email-send img {
+        height: 100px;
+    }
+
+    .contact-email-send h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+
+    .contact-left {
         height: 100vh;
         width: 50%;
         background-color: #fff;
@@ -541,7 +635,7 @@ html {
         justify-content: center;
     }
 
-    .contact .contact-left .contact-left-holder {
+    .contact-left-holder {
         height: 70%;
         width: 70%;
         display: grid;
@@ -549,14 +643,14 @@ html {
         grid-gap: 5%;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email {
+    .contact-email {
         grid-column: 1 / 4;
         grid-row: 2 / 5;
         border: 2px solid #1a2a5e;
         box-shadow: -10px 10px #1a2a5e;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social {
+    .contact-social {
         border: 2px solid #1a2a5e;
         position: relative;
         display: flex;
@@ -565,17 +659,23 @@ html {
         transition: 200ms linear;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social img {
+    .contact-social a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-social img {
         height: 60%;
         width: auto;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social p,
-    .contact .contact-left .contact-left-holder .contact-social .hidden-image {
+    .contact-social p,
+    .contact-social .hidden-image {
         display: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social:hover {
+    .contact-social:hover {
         background-color: #fe5220;
         color: #fff;
         transition: 200ms linear;
@@ -588,24 +688,24 @@ html {
         justify-content: center;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social:hover img {
+    .contact-social:hover img {
         display: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social:hover p {
+    .contact-social:hover p {
         display: flex;
         font-size: 1vw;
         text-align: center;
         margin-top: 5px;
     }
 
-    .contact .contact-left .contact-left-holder .contact-social:hover .hidden-image {
+    .contact-social:hover .hidden-image {
         display: flex;
         height: 40%;
         width: auto;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form {
+    .contact-email form {
         height: 90%;
         width: auto;
         margin: 20px;
@@ -615,7 +715,9 @@ html {
         font-size: 1.3vw;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .my-email {
+
+    form .my-email {
+        margin-top: 0;
         width: fit-content;
         text-align: center;
         background: linear-gradient(to bottom,
@@ -624,7 +726,7 @@ html {
 
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .input-text {
+    form .input-text {
         height: 30%;
         font-size: 1.3vw;
         border: 1px solid #1a2a5e;
@@ -633,7 +735,7 @@ html {
         outline: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .input-email {
+    form .input-email {
         height: fit-content;
         font-size: 1.3vw;
         border: 1px solid #1a2a5e;
@@ -642,7 +744,7 @@ html {
         appearance: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder {
+    form .form-button-holder {
         height: 10%;
         width: 100%;
         display: flex;
@@ -650,7 +752,7 @@ html {
         align-items: center;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button {
+    form .form-button-holder button {
         height: 100%;
         width: 20%;
         border: 2px #1a2a5e solid;
@@ -663,7 +765,7 @@ html {
         font-size: 1.3vw;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button:hover {
+    form .form-button-holder button:hover {
         background-color: #fe5220;
         color: #fff;
         transition: 200ms linear;
@@ -673,7 +775,7 @@ html {
         left: 3px;
     }
 
-    .contact .contact-right {
+    .contact-right {
         height: 100vh;
         width: 50%;
         background-color: #fff;
@@ -682,7 +784,7 @@ html {
         justify-content: center;
     }
 
-    .contact .contact-right .contact-right-holder {
+    .contact-right-holder {
         height: 70%;
         width: 70%;
         display: flex;
@@ -694,27 +796,27 @@ html {
 
     }
 
-    .contact .contact-right .contact-right-holder .contact-text {
+    .contact-text {
         height: 20%;
         width: 100%;
     }
 
-    .contact .contact-right .contact-right-holder .contact-text h1 {
+    .contact-text h1 {
         margin: 20px;
     }
 
-    .contact .contact-right .contact-right-holder .contact-map {
+    .contact-map {
         height: 40%;
         width: 100%;
         text-align: center;
     }
 
-    .contact .contact-right .contact-right-holder .contact-map img {
+    .contact-map img {
         height: 100%;
         width: auto;
     }
 
-    .contact .contact-right .contact-right-holder .contact-my-info {
+    .contact-my-info {
         height: 10%;
         width: 100%;
         margin-top: 30px;
@@ -723,57 +825,749 @@ html {
         justify-content: flex-start;
     }
 
-    .contact .contact-right .contact-right-holder .contact-my-info img {
+    .contact-my-info img {
         height: 60%;
         width: auto;
         margin: 0 20px;
     }
 
-    .contact .contact-right .contact-right-holder .contact-my-info p {
+    .contact-my-info p {
         background: linear-gradient(to bottom,
                 transparent 60%,
                 #fbd703 60%);
     }
 }
 
+@media only screen and (max-width: 1260px ) {
+    .navbar {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1a2a5e;
+        /* border-bottom: 2px solid #fe5220; */
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-border {
+        border-bottom: 2px solid #1a2a5e;
+        background-color: #fff;
+    }
+
+    .nav-border a {
+        color: #1a2a5e;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    .navbar .nav-menu {
+        display: flex;
+    }
+
+    .navbar .nav-menu li{
+        list-style: none;
+        padding: 0 40px;
+    }
+
+    /* .navbar .nav-menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2vw;
+    } */
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2vw;
+    }
+
+    .navbar .nav-menu li a:hover {
+        box-shadow: 0px 4px #fe5220;
+    }
+
+    nav ul li span,
+    .start .start-right h1 .highlight,
+    .about-me .about-me-left .about-me-info h1 span,
+    .skills .skills-top .skills-text h1 span,
+    .projects .projects-top .projects-text h1 span,
+    .contact .contact-right .contact-right-holder .contact-text h1 span {
+        color: #fe5220;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    body {
+        position: relative;
+        width: 100%;
+        /* font-size: 20px; */
+        font-size: 1.3vw;
+        color: #1a2a5e;
+    } 
+
+    .start {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #1a2a5e;
+        position: relative;
+
+    }
+
+    .start-left {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .start-photo {
+        height: 60%;
+        width: 100%;
+
+    }
+
+    .start-photo img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .start-right {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .start-greeting {
+        text-align: center;
+        color: #fff;
+        font-size: 4vw;
+    }
+
+    .start-contact {
+        display: none;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me-left {
+        height: 90vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 5%;
+        justify-content: center;
+    }
+
+    .about-me-info {
+        height: 90%;
+        width: 70%;
+        background-color: #fff;
+        overflow: scroll;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+        margin-top: 10%;
+        font-size: 2vw;
+        padding: 20px;
+    }
+
+    .about-me-right {
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me-grafic {
+        width: 60%;
+        margin-top: 5%;
+    }
+
+    .about-me-grafic img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .skills {
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .skills-top {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .skills-text {
+        width: 80%;
+    }
+
+    .skills-bottom {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills-holder {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skills-holder .skills-img {
+        height: 25%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills-holder .skills-img img {
+        height: 60%;
+        width: 60%;
+        object-fit: contain;
+    }
+
+    .skills-holder .skills-img p {
+        height: 15%;
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .projects {
+        height: fit-content;
+    }
+
+    .projects-top {
+        height: 30%;
+        width: 100%;
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-text {
+        width: 80%;
+        text-align: start;
+    }
+
+    .projects-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-holder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .projects-holder .project {
+        height: 80vh;
+        width: 60%;
+        margin-top: 10%;
+        background-color: #fff;
+        border: 2px solid #1a2a5e;
+        overflow: hidden;
+        position: relative;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+
+    .projects-holder img {
+        height: 40%;
+        width: 100%;
+    }
+
+    .projects-coming-soon img,
+    .projects-coming-soon .project-used-technology,
+    .projects-coming-soon .projects-button-holder {
+        filter: blur(2px);
+    }
+
+    .projects-holder .project h1 {
+        padding-top: 5%;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .project-used-technology {
+        height: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: 5%;
+    }
+
+    .project-used-technology .tech {
+        height: 10%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 2%;
+        margin: 2%;
+        font-size: 2vw;
+    }
+
+    .projects-button-holder {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-button,
+    .projects-button-coming-soon {
+        height: 90%;
+        width: 60%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 200ms linear;
+        font-size: 4vw;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #1a2a5e;
+        background-color: #fff;
+        height: 90%;
+        width: 70%;
+        color: #1a2a5e;
+        overflow: visible;
+    }
+
+    .modal-body {
+        height: 80%;
+    }
+
+    .left-btn {
+        cursor: pointer;
+        position: fixed;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+    }
+
+    .left-btn img {
+        height: 100%;
+    }
+
+    .right-btn {
+        cursor: pointer;
+        position: fixed;
+        top: 50%;
+        right: -5%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+    }
+
+    .right-btn img {
+        height: 100%;
+    }
+
+    .modal .modal-js-project {
+        display: block;
+    }
+
+    .modal .modal-react-project {
+        display: none;
+    }
+
+    .modal .modal-js-buttons {
+        display: flex;
+    }
+
+    .modal .modal-react-buttons {
+        display: none;
+    }
+
+    .modal::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+        padding: 10% 10% 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal .modal-header h1 {
+        font-size: 4vw;
+    }
+
+    .modal-header h1 span {
+        color: #fe5220;
+    }
+
+    .modal-header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 5vw;
+        color: #1a2a5e;
+    }
+    
+    .modal-text {
+        padding: 10%;
+        height: 45%;
+        overflow: scroll;
+        margin: 5% 0;
+    }
+
+    .modal-text h2 {
+        font-size: 2vw;
+    }
+
+    .modal-used-technology {
+        height: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 0 5%;
+    }
+
+    .modal-used-technology .tech {
+        height: 35%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: #1a2a5e;
+        color: #fff;
+        padding: 1%;
+        margin: 1%;
+        font-size: 2vw;
+    }
+
+    .modal-button-holder {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .modal-button {
+        height: 35%;
+        width: 35%;
+        border: 2px #1a2a5e solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+        font-size: 3vw;
+    }
+
+    .modal-button a {
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .contact-email-send {
+        border: 2px #1a2a5e solid;
+        background-color: #fff;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -75%);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        z-index: 5;
+    }
+
+    .contact-email-send img {
+        height: 100px;
+    }
+
+    .contact-email-send h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+
+
+    .contact-left {
+        height: 80vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
+    .contact-left-holder {
+        height: 80%;
+        width: 60%;
+        display: grid;
+        grid-template: 20% 20% 20% 25% / 30% 30% 30%;
+        grid-gap: 5%;
+    }
+
+    .contact-email {
+        grid-column: 1 / 4;
+        grid-row: 2 / 5;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+    }
+
+    .contact-social {
+        border: 2px solid #1a2a5e;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+    }
+
+    .contact-social img {
+        height: 60%;
+        width: auto;
+    }
+
+    .contact-social p,
+    .contact-social .hidden-image {
+        display: none;
+    }
+
+    .contact-email form {
+        height: 90%;
+        width: auto;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 2vw;
+    }
+
+    form .my-email {
+        width: fit-content;
+        text-align: center;
+        background: linear-gradient(to bottom,
+                transparent 60%,
+                #fbd703 60%);
+
+    }
+
+    form .input-text {
+        height: 30%;
+        font-size: 2vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        resize: none;
+        outline: none;
+    }
+
+    form .input-email {
+        height: fit-content;
+        font-size: 2vw;
+        border: 1px solid #1a2a5e;
+        padding-left: 5px;
+        outline: none;
+        appearance: none;
+    }
+
+    form .form-button-holder {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .form-button-holder button {
+        height: 100%;
+        width: 40%;
+        border: 2px #1a2a5e solid;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms linear;
+        position: relative;
+        font-size: 2vw;
+        color: #1a2a5e;
+    }
+
+    .contact-right {
+        height: 60vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .contact-right-holder {
+        height: 80%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        border: 2px solid #1a2a5e;
+        box-shadow: -10px 10px #1a2a5e;
+
+    }
+
+    .contact-text {
+        height: 20%;
+        width: 100%;
+    }
+
+    .contact-text h1 {
+        margin: 20px;
+    }
+
+    .contact-map {
+        height: 40%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-map img {
+        height: 100%;
+        width: auto;
+    }
+
+    .contact-my-info {
+        height: 10%;
+        width: 100%;
+        margin-top: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .contact-my-info img {
+        height: 60%;
+        width: auto;
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 900px ) {
+
+
+    .start-left {
+        height: 50%;
+    }
+
+    .start-right {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5%;
+        align-items: center;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     .navbar {
         position: absolute;
-        z-index: 5;
-        width: 100%;
-        min-height: 80px;
+        min-height: 70px;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        /* padding: 0 24px; */
-        background-color: #1a2a5e;
-
     }
 
     .nav-menu {
         position: fixed;
         top: -100%;
         background-color: #1a2a5e;
-        flex-direction: column;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         transition: 0.5s;
     }
 
     .nav-menu.active {
         position: absolute;
-        top: 70px;
+        top: 60px;
     }
 
     .nav-menu li {
-        list-style: none;
         margin: 25px 0;
-    }
-
-    .nav-menu li a {
-        color: #fff;
-        text-decoration: none;
     }
 
     .hamburger {
@@ -803,14 +1597,8 @@ html {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    body {
-        width: 100%;
-        color: #1a2a5e;
-
-    }
-
     h1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     h2 {
@@ -821,535 +1609,107 @@ html {
         font-size: 4vw;
     }
 
-    nav ul li span,
-    .start .start-right h1 span,
-    .about-me .about-me-left .about-me-info h1 span,
-    .skills .skills-top .skills-text h1 span,
-    .projects .projects-top .projects-text h1 span,
-    .contact .contact-right .contact-right-holder .contact-text h1 span {
-        color: #fe5220;
-    }
-
     .start {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #1a2a5e;
-        position: relative;
-
-    }
-
-    .start .start-holder .start-left {
-        width: 100%;
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
     }
 
-    .start .start-holder .start-left .start-photo {
+    .start-left {
         height: 70%;
-        width: 100%;
-
+        margin-top: 5%;
     }
 
-    .start .start-holder .start-left .start-photo img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+    .start-photo {
+        height: 70%;
     }
 
-    .start .start-holder .start-right {
+    .start-right {
         height: 30%;
+        margin-top: 0;
         width: 100%;
     }
 
-    .start .start-holder .start-right .start-greeting {
-        text-align: center;
-        color: #fff;
-    }
-
-    .start .start-holder .start-right .start-greeting .start-contact {
-        display: none;
-    }
-
-    .about-me {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-me .about-me-left {
-        height: 90vh;
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .about-me .about-me-left .about-me-info {
-        height: 90%;
+    .about-me-info {
         width: 90%;
-        background-color: #fff;
-        overflow: scroll;
-        border: 2px solid #1a2a5e;
-        box-shadow: -10px 10px #1a2a5e;
-        margin-top: 10%;
     }
 
-    .about-me .about-me-left .about-me-info h1,
-    .about-me .about-me-left .about-me-info p {
+    .about-me-info h1,
+    .about-me-info p {
         margin: 20px;
     }
 
-    .about-me .about-me-right {
-        height: 80vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .about-me .about-me-right .about-me-grafic {
+    .about-me-grafic {
         width: 90%;
     }
 
-    .about-me .about-me-right .about-me-grafic img {
-        height: 100%;
-        width: 100%;
-    }
-
-    .skills {
-        height: 100vh;
-        width: 100%;
-        background-color: #fff;
-    }
-
-    .skills .skills-top {
-        height: 15%;
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-    }
-
-    .skills .skills-top .skills-text {
-        width: 80%;
-    }
-
-    .skills .skills-bottom {
-        height: 85%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .skills .skills-bottom .skills-holder {
-        height: 90%;
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .skills .skills-bottom .skills-holder .skills-img {
-        height: 25%;
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .skills .skills-bottom .skills-holder .skills-img img {
+    .skills-holder .skills-img img {
         height: 70%;
         width: 70%;
-        object-fit: contain;
     }
 
-    .skills .skills-bottom .skills-holder .skills-img p {
-        height: 15%;
+    .projects-holder .project {
+        width: 80%;
+    }
+
+    .project-used-technology .tech {
         font-size: 3vw;
-        text-align: center;
-        margin-bottom: 5%;
     }
 
-    .projects {
-        height: fit-content;
-    }
-
-    .projects .projects-top {
-        height: 30%;
-        width: 100%;
-        padding-top: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .projects .projects-top .projects-text {
-        width: 80%;
-        text-align: start;
-    }
-
-    .projects .projects-bottom {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .projects .projects-bottom .projects-holder {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-    }
-
-    .projects .projects-bottom .projects-holder .project {
-        height: 80vh;
-        width: 80%;
-        margin-top: 10%;
-        background-color: #fff;
-        border: 2px solid #1a2a5e;
-        overflow: hidden;
-        position: relative;
-        box-shadow: -10px 10px #1a2a5e;
-    }
-
-    .projects .projects-bottom .projects-holder img {
-        height: 40%;
-        width: 100%;
-    }
-
-    .projects .projects-bottom .projects-holder .projects-coming-soon img,
-    .projects .projects-bottom .projects-holder .projects-coming-soon .project-used-technology,
-    .projects .projects-bottom .projects-holder .projects-coming-soon .projects-button-holder {
-        filter: blur(2px);
-    }
-
-    .projects .projects-bottom .projects-holder .project h1 {
-        padding-top: 5%;
-        text-align: center;
-    }
-
-    .projects .projects-bottom .projects-holder .project .project-used-technology {
-        height: 28%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        margin: 5%;
-    }
-
-    .projects .projects-bottom .projects-holder .project .project-used-technology .tech {
-        height: 13%;
-        width: auto;
-        display: flex;
-        align-items: center;
-        background-color: #1a2a5e;
-        color: #fff;
-        padding: 2%;
-        margin: 2%;
-        font-size: 4vw;
-    }
-
-    .projects .projects-bottom .projects-holder .project .projects-button-holder {
-        height: 10%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button,
-    .projects .projects-bottom .projects-holder .project .projects-button-holder .projects-button-coming-soon {
-        height: 90%;
-        width: 60%;
-        border: 2px #1a2a5e solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        transition: 200ms linear;
+    .projects-button,
+    .projects-button-coming-soon {
         font-size: 5vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 2px solid #1a2a5e;
-        background-color: #fff;
-        height: 90%;
+    .modal {
         width: 90%;
-        color: #1a2a5e;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body {
-        height: 80%;
+    .modal .modal-header h1 {
+        font-size: 5vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal::backdrop {
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header {
-        padding: 0 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 {
-        font-size: 6vw;
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header h1 span {
-        color: #fe5220;
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-header .close-button {
-        cursor: pointer;
-        border: none;
-        outline: none;
-        background: none;
+    .modal .modal-header .close-button {
         font-size: 8vw;
-        color: #1a2a5e;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text {
-        padding: 5%;
+    .modal-text {
         height: 55%;
-        overflow: scroll;
-        margin: 5% 0;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-text h2 {
+    .modal-text h2 {
         font-size: 4vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology {
-        height: 10%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        padding: 0 5%;
+    .modal-used-technology .tech {
+        font-size: 3vw;
+
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-body .modal-used-technology .tech {
-        height: 35%;
-        width: auto;
-        display: flex;
-        align-items: center;
-        background-color: #1a2a5e;
-        color: #fff;
-        padding: 1%;
-        margin: 1%;
+    .modal-button {
         font-size: 4vw;
     }
 
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder {
-        height: 20%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: fixed;
-        bottom: 0;
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button {
-        height: 35%;
-        width: 35%;
-        border: 2px #1a2a5e solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 200ms linear;
-        position: relative;
-        font-size: 4vw;
-    }
-
-    .projects .projects-bottom .projects-holder .project .modal .modal-button-holder .modal-button a {
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #000;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact .contact-left {
-        height: 80vh;
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        margin-bottom: 10%;
-    }
-
-    .contact .contact-left .contact-left-holder {
-        height: 80%;
+    .contact-left-holder {
         width: 80%;
-        display: grid;
-        grid-template: 20% 20% 20% 25% / 30% 30% 30%;
-        grid-gap: 5%;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email {
-        grid-column: 1 / 4;
-        grid-row: 2 / 5;
-        border: 2px solid #1a2a5e;
-        box-shadow: -10px 10px #1a2a5e;
-    }
-
-    .contact .contact-left .contact-left-holder .contact-social {
-        border: 2px solid #1a2a5e;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 200ms linear;
-    }
-
-    .contact .contact-left .contact-left-holder .contact-social img {
-        height: 60%;
-        width: auto;
-    }
-
-    .contact .contact-left .contact-left-holder .contact-social p,
-    .contact .contact-left .contact-left-holder .contact-social .hidden-image {
-        display: none;
-    }
-
-    .contact .contact-left .contact-left-holder .contact-email form {
-        height: 90%;
-        width: auto;
-        margin: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .contact-email form {
         font-size: 4vw;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .my-email {
-        width: fit-content;
-        text-align: center;
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
-
-    }
-
-    .contact .contact-left .contact-left-holder .contact-email form .input-text {
-        height: 30%;
+    form .input-text {
         font-size: 4vw;
-        border: 1px solid #1a2a5e;
-        padding-left: 5px;
-        resize: none;
-        outline: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .input-email {
-        height: fit-content;
+    form .input-email {
         font-size: 4vw;
-        border: 1px solid #1a2a5e;
-        padding-left: 5px;
-        outline: none;
-        appearance: none;
     }
 
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder {
-        height: 10%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .contact .contact-left .contact-left-holder .contact-email form .form-button-holder button {
-        height: 100%;
-        width: 40%;
-        border: 2px #1a2a5e solid;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 200ms linear;
-        position: relative;
+    form .form-button-holder button {
         font-size: 4vw;
-        color: #1a2a5e;
     }
 
-    .contact .contact-right {
-        height: 60vh;
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .contact .contact-right .contact-right-holder {
-        height: 80%;
+    .contact-right-holder {
         width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        border: 2px solid #1a2a5e;
-        box-shadow: -10px 10px #1a2a5e;
-
     }
-
-    .contact .contact-right .contact-right-holder .contact-text {
-        height: 20%;
-        width: 100%;
-    }
-
-    .contact .contact-right .contact-right-holder .contact-text h1 {
-        margin: 20px;
-    }
-
-    .contact .contact-right .contact-right-holder .contact-map {
-        height: 40%;
-        width: 100%;
-        text-align: center;
-    }
-
-    .contact .contact-right .contact-right-holder .contact-map img {
-        height: 100%;
-        width: auto;
-    }
-
-    .contact .contact-right .contact-right-holder .contact-my-info {
-        height: 10%;
-        width: 100%;
-        margin-top: 30px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .contact .contact-right .contact-right-holder .contact-my-info img {
-        height: 60%;
-        width: auto;
-        margin: 0 20px;
-    }
-
-
 }

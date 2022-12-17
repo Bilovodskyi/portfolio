@@ -1,24 +1,43 @@
 const firstModal = document.querySelector('#first-modal')
 const secondModal = document.querySelector('#second-modal')
 const thirdModal = document.querySelector('#third-modal')
+const fourthModal = document.querySelector('#fourth-modal')
 const openFirstModal = document.querySelector('.first-project-button')
 const openSecondModal = document.querySelector('.second-project-button')
 const openThirdModal = document.querySelector('.third-project-button')
+const openFourthModal = document.querySelector('.fourth-project-button')
 const closeModalOne = document.querySelector('.close-button-one')
 const closeModalTwo = document.querySelector('.close-button-two')
-const closeModalThree = document.querySelector('.close-button-three')
+const closeModalThree = document.querySelectorAll('.close-button-three')
+const closeModalFour = document.querySelector('.close-button-four')
 const body = document.querySelector('body')
 
 const fadeIn = document.querySelectorAll('.fade-in')
 const fadeInGraphic = document.querySelectorAll('.fade-in-graphic')
 
-const navMenu = document.querySelector('nav')
+const navMenu = document.querySelector('.navbar')
 const startPage = document.querySelector('.start')
 
 const hamburger = document.querySelector('.hamburger')
 const navMenuMobile = document.querySelector('.nav-menu')
 const navLink = document.querySelectorAll('.nav-link')
 
+const sendForm = document.querySelector('form')
+const successMsg = document.querySelector('.contact-email-send')
+
+const leftBtn = document.querySelector('.left-btn')
+const rightBtn = document.querySelector('.right-btn')
+const modalJs = document.querySelector('.modal-js-project')
+const modalReact = document.querySelector('.modal-react-project')
+const modalJsButtons = document.querySelector('.modal-js-buttons')
+const modalReactButtons = document.querySelector('.modal-react-buttons')
+
+sendForm.addEventListener('submit', () => {
+    successMsg.style.display = 'flex'
+    setTimeout(() => {
+        successMsg.style.display = 'none'
+    }, 1000)
+})
 
 function onClickOne(event) {
     if (event.target === firstModal) {
@@ -41,6 +60,14 @@ function onClickThree(event) {
     }
 }
 
+function onClickFour(event) {
+    if (event.target === fourthModal) {
+        fourthModal.close()
+        body.style.overflow = 'auto'
+    }
+}
+
+
 openFirstModal.addEventListener('click', () => {
     firstModal.showModal()
     body.style.overflow = 'hidden'
@@ -56,6 +83,12 @@ openThirdModal.addEventListener('click', () => {
     body.style.overflow = 'hidden'
 })
 
+openFourthModal.addEventListener('click', () => {
+    fourthModal.showModal()
+    body.style.overflow = 'hidden'
+})
+
+
 closeModalOne.addEventListener('click', () => {
     firstModal.close()
     body.style.overflow = 'auto'
@@ -66,10 +99,16 @@ closeModalTwo.addEventListener('click', () => {
     body.style.overflow = 'auto'
 })
 
-closeModalThree.addEventListener('click', () => {
+closeModalThree.forEach(closeBtn => closeBtn.addEventListener('click', () => {
     thirdModal.close()
     body.style.overflow = 'auto'
+}))
+
+closeModalFour.addEventListener('click', () => {
+    fourthModal.close()
+    body.style.overflow = 'auto'
 })
+
 
 firstModal.addEventListener('click', onClickOne)
 
@@ -77,9 +116,8 @@ secondModal.addEventListener('click', onClickTwo)
 
 thirdModal.addEventListener('click', onClickThree)
 
-// appearOptions = { 
-//     rootMargin: "0px 0px -150px 0px " 
-// }
+fourthModal.addEventListener('click', onClickFour)
+
 
 const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
     entries.forEach(entry => {
@@ -138,3 +176,41 @@ navLink.forEach(link => link.addEventListener('click', () => {
     hamburger.classList.remove('active')
     navMenuMobile.classList.remove('active')
 }))
+
+
+let isJsProject = true
+
+rightBtn.addEventListener('click', () => {
+    if (isJsProject) {
+        modalJs.style.display = 'none'
+        modalJsButtons.style.display = 'none'
+        modalReact.style.display = 'block'
+        modalReactButtons.style.display = 'flex'
+        isJsProject = false
+    } else {
+        modalJs.style.display = 'block'
+        modalJsButtons.style.display = 'flex'
+        modalReact.style.display = 'none'
+        modalReactButtons.style.display = 'none'
+        isJsProject = true
+    }
+    console.log(isJsProject)
+    
+})
+
+leftBtn.addEventListener('click', () => {
+    if (isJsProject) {
+        modalJs.style.display = 'none'
+        modalJsButtons.style.display = 'none'
+        modalReact.style.display = 'block'
+        modalReactButtons.style.display = 'flex'
+        isJsProject = false
+    } else {
+        modalJs.style.display = 'block'
+        modalJsButtons.style.display = 'flex'
+        modalReact.style.display = 'none'
+        modalReactButtons.style.display = 'none'
+        isJsProject = true
+    }
+    console.log(isJsProject)
+})
