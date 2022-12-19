@@ -1595,7 +1595,7 @@ html {
     }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
 
     h2 {
@@ -1603,7 +1603,8 @@ html {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        overflow: auto;
     }
 
     .start {
@@ -1652,7 +1653,7 @@ html {
         width: 80%;
     }
     .projects-holder .project h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .project-used-technology .tech {
@@ -1690,7 +1691,7 @@ html {
     }
 
     .modal-button {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .contact-left-holder {
@@ -1698,20 +1699,20 @@ html {
     }
 
     .contact-email form {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     form .input-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     form .input-email {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
 
     form .form-button-holder button {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .contact-right-holder {
