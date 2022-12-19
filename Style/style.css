@@ -42,7 +42,7 @@ html {
     }
 
     h1 {
-        font-size: 3vw;
+        font-size: 3rem;
     }
 
     nav ul li {
@@ -54,7 +54,7 @@ html {
     nav ul li a {
         text-decoration: none;
         color: #fff;
-        font-size: 1.3vw;
+        font-size: 1.3rem;
     }
 
     nav ul li a:hover {
@@ -73,23 +73,17 @@ html {
     body {
         width: 100%;
         /* font-size: 20px; */
-        font-size: 1.3vw;
+        font-size: 1.1rem;
         color: #1a2a5e;
     }
 
     .start {
+        box-sizing: border-box;
         height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .start-holder {
-        box-sizing: border-box;
-        height: 100vh;
-        width: 100%;
-        display: flex;
         transition: 200ms linear;
         overflow: hidden;
     }
@@ -362,7 +356,7 @@ html {
     }
 
     .projects-holder .project h1 {
-        font-size: 1.3vw;
+        font-size: 1.2rem;
         padding-top: 5%;
         text-align: center;
     }
@@ -384,7 +378,7 @@ html {
         color: #fff;
         padding: 2%;
         margin: 2%;
-        font-size: 1vw;
+        font-size: 0.9rem;
     }
 
     .projects-button-holder {
@@ -498,7 +492,7 @@ html {
     }
 
     .modal .modal-header h1 {
-        font-size: 2vw;
+        font-size: 1.75rem;
     }
 
     .modal-header h1 span {
@@ -510,7 +504,7 @@ html {
         border: none;
         outline: none;
         background: none;
-        font-size: 2vw;
+        font-size: 1.75rem;
     }
 
     .modal-text {
@@ -521,7 +515,7 @@ html {
     }
 
     .modal-text h2 {
-        font-size: 1.3vw;
+        font-size: 1.2rem;
     }
 
     .modal-text h2 span {
@@ -547,7 +541,7 @@ html {
         color: #fff;
         padding: 1%;
         margin: 1%;
-        font-size: 1vw;
+        font-size: 0.9rem;
     }
 
     .modal-button-holder {
@@ -579,7 +573,7 @@ html {
         align-items: center;
         justify-content: center;
         color: #000;
-        font-size: 1.5vw;
+        font-size: 1.3rem;
     }
 
     .modal-button:hover {
@@ -694,7 +688,7 @@ html {
 
     .contact-social:hover p {
         display: flex;
-        font-size: 1vw;
+        font-size: 0.9rem;
         text-align: center;
         margin-top: 5px;
     }
@@ -712,7 +706,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size: 1.3vw;
+        font-size: 1.2rem;
     }
 
 
@@ -728,7 +722,7 @@ html {
 
     form .input-text {
         height: 30%;
-        font-size: 1.3vw;
+        font-size: 1.2rem;
         border: 1px solid #1a2a5e;
         padding-left: 5px;
         resize: none;
@@ -737,7 +731,7 @@ html {
 
     form .input-email {
         height: fit-content;
-        font-size: 1.3vw;
+        font-size: 1.2rem;
         border: 1px solid #1a2a5e;
         padding-left: 5px;
         outline: none;
@@ -762,7 +756,7 @@ html {
         justify-content: center;
         transition: 200ms linear;
         position: relative;
-        font-size: 1.3vw;
+        font-size: 1.2rem;
     }
 
     form .form-button-holder button:hover {
@@ -867,7 +861,7 @@ html {
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 3rem;
     }
 
     .navbar .nav-menu {
@@ -879,16 +873,10 @@ html {
         padding: 0 40px;
     }
 
-    /* .navbar .nav-menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 2vw;
-    } */
-
     nav ul li a {
         text-decoration: none;
         color: #fff;
-        font-size: 2vw;
+        font-size: 1.5rem;
     }
 
     .navbar .nav-menu li a:hover {
@@ -904,15 +892,11 @@ html {
         color: #fe5220;
     }
 
-    h1 {
-        font-size: 4vw;
-    }
-
     body {
         position: relative;
         width: 100%;
-        /* font-size: 20px; */
-        font-size: 1.3vw;
+
+        font-size: 1.1rem;
         color: #1a2a5e;
     } 
 
@@ -921,7 +905,7 @@ html {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         background-color: #1a2a5e;
         position: relative;
 
@@ -937,7 +921,7 @@ html {
     }
 
     .start-photo {
-        height: 60%;
+        height: 80%;
         width: 100%;
 
     }
@@ -953,14 +937,13 @@ html {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 
     .start-greeting {
         text-align: center;
         color: #fff;
-        font-size: 4vw;
     }
 
     .start-contact {
@@ -990,12 +973,12 @@ html {
         border: 2px solid #1a2a5e;
         box-shadow: -10px 10px #1a2a5e;
         margin-top: 10%;
-        font-size: 2vw;
+        font-size: 1.75rem;
         padding: 20px;
     }
 
     .about-me-right {
-        height: 80vh;
+        height: 90vh;
         width: 100%;
         display: flex;
         align-items: center;
@@ -1064,7 +1047,7 @@ html {
 
     .skills-holder .skills-img p {
         height: 15%;
-        font-size: 3vw;
+        font-size: 1.5rem;
         text-align: center;
         margin-bottom: 5%;
     }
@@ -1128,7 +1111,7 @@ html {
     .projects-holder .project h1 {
         padding-top: 5%;
         text-align: center;
-        font-size: 5vw;
+        font-size: 3rem;
     }
 
     .project-used-technology {
@@ -1148,7 +1131,7 @@ html {
         color: #fff;
         padding: 2%;
         margin: 2%;
-        font-size: 2vw;
+        font-size: 1.25rem;
     }
 
     .projects-button-holder {
@@ -1168,7 +1151,7 @@ html {
         justify-content: center;
         position: relative;
         transition: 200ms linear;
-        font-size: 4vw;
+        font-size: 2rem;
     }
 
     .modal {
@@ -1245,14 +1228,14 @@ html {
     }
 
     .modal-header {
-        padding: 10% 10% 0 10%;
+        padding: 5% 10% 0 10%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .modal .modal-header h1 {
-        font-size: 4vw;
+        font-size: 2rem;
     }
 
     .modal-header h1 span {
@@ -1264,19 +1247,19 @@ html {
         border: none;
         outline: none;
         background: none;
-        font-size: 5vw;
+        font-size: 3rem;
         color: #1a2a5e;
     }
     
     .modal-text {
         padding: 10%;
-        height: 45%;
+        height: 40%;
         overflow: scroll;
-        margin: 5% 0;
+        margin: 2% 0;
     }
 
     .modal-text h2 {
-        font-size: 2vw;
+        font-size: 1.3rem;
     }
 
     .modal-used-technology {
@@ -1296,7 +1279,7 @@ html {
         color: #fff;
         padding: 1%;
         margin: 1%;
-        font-size: 2vw;
+        font-size: 1.25rem;
     }
 
     .modal-button-holder {
@@ -1318,7 +1301,7 @@ html {
         justify-content: center;
         transition: 200ms linear;
         position: relative;
-        font-size: 3vw;
+        font-size: 1.5rem;
     }
 
     .modal-button a {
@@ -1397,6 +1380,12 @@ html {
         transition: 200ms linear;
     }
 
+    .contact-social a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
     .contact-social img {
         height: 60%;
         width: auto;
@@ -1414,7 +1403,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size: 2vw;
+        font-size: 1.5rem;
     }
 
     form .my-email {
@@ -1428,7 +1417,7 @@ html {
 
     form .input-text {
         height: 30%;
-        font-size: 2vw;
+        font-size: 1.5rem;
         border: 1px solid #1a2a5e;
         padding-left: 5px;
         resize: none;
@@ -1437,7 +1426,7 @@ html {
 
     form .input-email {
         height: fit-content;
-        font-size: 2vw;
+        font-size: 1.5rem;
         border: 1px solid #1a2a5e;
         padding-left: 5px;
         outline: none;
@@ -1462,7 +1451,7 @@ html {
         justify-content: center;
         transition: 200ms linear;
         position: relative;
-        font-size: 2vw;
+        font-size: 1.5rem;
         color: #1a2a5e;
     }
 
@@ -1525,6 +1514,9 @@ html {
 
 @media only screen and (max-width: 900px ) {
 
+    h1 {
+        font-size: 2rem;
+    }
 
     .start-left {
         height: 50%;
@@ -1535,9 +1527,14 @@ html {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         margin-top: 5%;
         align-items: center;
+    }
+
+    .about-me-info {
+        font-size: 1.25rem;
+
     }
 }
 
@@ -1598,15 +1595,15 @@ html {
     }
 
     h1 {
-        font-size: 6vw;
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: 5vw;
+        font-size: 1.1rem;
     }
 
     p {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     .start {
@@ -1629,12 +1626,13 @@ html {
     }
 
     .about-me-info {
-        width: 90%;
+        width: 80%;
     }
 
     .about-me-info h1,
     .about-me-info p {
-        margin: 20px;
+        margin: 10px;
+        margin-bottom: 20px;
     }
 
     .about-me-grafic {
@@ -1646,17 +1644,24 @@ html {
         width: 70%;
     }
 
+    .skills-holder .skills-img p {
+        font-size: 0.9rem;
+    }
+
     .projects-holder .project {
         width: 80%;
     }
+    .projects-holder .project h1 {
+        font-size: 1.75rem;
+    }
 
     .project-used-technology .tech {
-        font-size: 3vw;
+        font-size: 0.9rem;
     }
 
     .projects-button,
     .projects-button-coming-soon {
-        font-size: 5vw;
+        font-size: 1.5rem;
     }
 
     .modal {
@@ -1664,28 +1669,28 @@ html {
     }
 
     .modal .modal-header h1 {
-        font-size: 5vw;
+        font-size: 1.5rem;
     }
 
     .modal .modal-header .close-button {
-        font-size: 8vw;
+        font-size: 2rem;
     }
 
     .modal-text {
-        height: 55%;
+        height: 52%;
     }
 
     .modal-text h2 {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     .modal-used-technology .tech {
-        font-size: 3vw;
+        font-size: 0.9rem;
 
     }
 
     .modal-button {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     .contact-left-holder {
@@ -1693,20 +1698,20 @@ html {
     }
 
     .contact-email form {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     form .input-text {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     form .input-email {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
 
     form .form-button-holder button {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     .contact-right-holder {
