@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Space Mono';
+    font-family: "Space Mono";
     src: url(./Fonts/SpaceMono-Regular.ttf);
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono', sans-serif;
+    font-family: "Space Mono", sans-serif;
 }
 
 html {
@@ -123,7 +123,6 @@ html {
         display: none;
     }
 
-
     .start-right h1,
     .start-right h2 {
         color: #fff;
@@ -149,7 +148,6 @@ html {
 
     .start-contact a:hover .hidden-logo {
         display: block;
-        
     }
 
     .start-contact a:hover img {
@@ -172,7 +170,6 @@ html {
         left: 2px;
         transition: 200ms linear;
     }
-
 
     .about-me {
         display: flex;
@@ -215,7 +212,6 @@ html {
     .about-me-grafic {
         height: 70%;
         width: 90%;
-        
     }
 
     .about-me-grafic img {
@@ -231,7 +227,6 @@ html {
     .fade-in-graphic.appear {
         opacity: 1;
     }
-
 
     .skills,
     .projects {
@@ -249,9 +244,7 @@ html {
     }
 
     .skills-text h2 {
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
+        background: linear-gradient(to bottom, transparent 60%, #fbd703 60%);
     }
 
     .skills-bottom {
@@ -301,7 +294,6 @@ html {
         opacity: 1;
     }
 
-
     .projects-top {
         height: 22%;
         width: 100%;
@@ -335,7 +327,7 @@ html {
     }
 
     .projects-holder img {
-        height: 35%;
+        height: 32%;
         width: 100%;
     }
 
@@ -479,7 +471,6 @@ html {
         display: none;
     }
 
-
     .modal::backdrop {
         background: rgba(0, 0, 0, 0.5);
     }
@@ -519,9 +510,7 @@ html {
     }
 
     .modal-text h2 span {
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
+        background: linear-gradient(to bottom, transparent 60%, #fbd703 60%);
     }
 
     .modal-used-technology {
@@ -589,7 +578,6 @@ html {
         color: #fff;
         cursor: pointer;
     }
-
 
     .contact {
         position: relative;
@@ -709,15 +697,11 @@ html {
         font-size: 1.2rem;
     }
 
-
     form .my-email {
         margin-top: 0;
         width: fit-content;
         text-align: center;
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
-
+        background: linear-gradient(to bottom, transparent 60%, #fbd703 60%);
     }
 
     form .input-text {
@@ -787,7 +771,6 @@ html {
         justify-content: start;
         border: 2px solid #1a2a5e;
         box-shadow: -10px 10px #1a2a5e;
-
     }
 
     .contact-text {
@@ -826,13 +809,11 @@ html {
     }
 
     .contact-my-info p {
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
+        background: linear-gradient(to bottom, transparent 60%, #fbd703 60%);
     }
 }
 
-@media only screen and (max-width: 1260px ) {
+@media only screen and (max-width: 1260px) {
     .navbar {
         width: 100%;
         height: 60px;
@@ -868,7 +849,7 @@ html {
         display: flex;
     }
 
-    .navbar .nav-menu li{
+    .navbar .nav-menu li {
         list-style: none;
         padding: 0 40px;
     }
@@ -898,7 +879,7 @@ html {
 
         font-size: 1.1rem;
         color: #1a2a5e;
-    } 
+    }
 
     .start {
         width: 100%;
@@ -908,7 +889,6 @@ html {
         justify-content: center;
         background-color: #1a2a5e;
         position: relative;
-
     }
 
     .start-left {
@@ -923,7 +903,6 @@ html {
     .start-photo {
         height: 80%;
         width: 100%;
-
     }
 
     .start-photo img {
@@ -1083,7 +1062,6 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-
     }
 
     .projects-holder .project {
@@ -1250,7 +1228,7 @@ html {
         font-size: 3rem;
         color: #1a2a5e;
     }
-    
+
     .modal-text {
         padding: 10%;
         height: 40%;
@@ -1345,7 +1323,6 @@ html {
         font-size: 2rem;
     }
 
-
     .contact-left {
         height: 80vh;
         width: 100%;
@@ -1409,10 +1386,7 @@ html {
     form .my-email {
         width: fit-content;
         text-align: center;
-        background: linear-gradient(to bottom,
-                transparent 60%,
-                #fbd703 60%);
-
+        background: linear-gradient(to bottom, transparent 60%, #fbd703 60%);
     }
 
     form .input-text {
@@ -1473,7 +1447,6 @@ html {
         justify-content: start;
         border: 2px solid #1a2a5e;
         box-shadow: -10px 10px #1a2a5e;
-
     }
 
     .contact-text {
@@ -1512,8 +1485,7 @@ html {
     }
 }
 
-@media only screen and (max-width: 900px ) {
-
+@media only screen and (max-width: 900px) {
     h1 {
         font-size: 2rem;
     }
@@ -1534,7 +1506,6 @@ html {
 
     .about-me-info {
         font-size: 1.25rem;
-
     }
 }
 
@@ -1687,7 +1658,6 @@ html {
 
     .modal-used-technology .tech {
         font-size: 0.9rem;
-
     }
 
     .modal-button {
@@ -1709,7 +1679,6 @@ html {
     form .input-email {
         font-size: 0.9rem;
     }
-
 
     form .form-button-holder button {
         font-size: 0.9rem;
