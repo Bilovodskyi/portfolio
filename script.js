@@ -1,13 +1,13 @@
 const firstModal = document.querySelector("#first-modal");
-// const secondModal = document.querySelector('#second-modal')
+
 const thirdModal = document.querySelector("#third-modal");
 const fourthModal = document.querySelector("#fourth-modal");
 const openFirstModal = document.querySelector(".first-project-button");
-// const openSecondModal = document.querySelector('.second-project-button')
+
 const openThirdModal = document.querySelector(".third-project-button");
 const openFourthModal = document.querySelector(".fourth-project-button");
 const closeModalOne = document.querySelector(".close-button-one");
-// const closeModalTwo = document.querySelector('.close-button-two')
+
 const closeModalThree = document.querySelectorAll(".close-button-three");
 const closeModalFour = document.querySelector(".close-button-four");
 const body = document.querySelector("body");
@@ -46,13 +46,6 @@ function onClickOne(event) {
     }
 }
 
-// function onClickTwo(event) {
-//     if (event.target === secondModal) {
-//         secondModal.close()
-//         body.style.overflow = 'auto'
-//     }
-// }
-
 function onClickThree(event) {
     if (event.target === thirdModal) {
         thirdModal.close();
@@ -72,11 +65,6 @@ openFirstModal.addEventListener("click", () => {
     body.style.overflow = "hidden";
 });
 
-// openSecondModal.addEventListener('click', () => {
-//     secondModal.showModal()
-//     body.style.overflow = 'hidden'
-// })
-
 openThirdModal.addEventListener("click", () => {
     thirdModal.showModal();
     body.style.overflow = "hidden";
@@ -92,11 +80,6 @@ closeModalOne.addEventListener("click", () => {
     body.style.overflow = "auto";
 });
 
-// closeModalTwo.addEventListener('click', () => {
-//     secondModal.close()
-//     body.style.overflow = 'auto'
-// })
-
 closeModalThree.forEach((closeBtn) =>
     closeBtn.addEventListener("click", () => {
         thirdModal.close();
@@ -110,8 +93,6 @@ closeModalFour.addEventListener("click", () => {
 });
 
 firstModal.addEventListener("click", onClickOne);
-
-// secondModal.addEventListener('click', onClickTwo)
 
 thirdModal.addEventListener("click", onClickThree);
 
